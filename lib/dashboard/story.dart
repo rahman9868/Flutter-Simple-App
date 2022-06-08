@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-import 'detail_news.dart';
-import 'model/news.dart';
+import '../detail_news.dart';
+import '../model/news.dart';
 
 class StoryNews extends StatelessWidget {
     final List<News> news;

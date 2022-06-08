@@ -1,7 +1,6 @@
 
 
 class News {
-  final int id;
   final String author;
   final String title;
   final String description;
@@ -11,7 +10,6 @@ class News {
   final String content;
 
   News({
-    required this.id,
     required this.author,
     required this.title,
     required this.description,
@@ -22,12 +20,19 @@ class News {
   });
 
   News.fromJson(Map<String, dynamic> json)
-      : id = 0,
-        author = json['author'],
+      : author = json['author'],
         title = json['title'],
         description = json['description'],
         url = json['url'],
         urlToImage = json['urlToImage'],
         publishedAt = json['publishedAt'],
         content = json['content'];
+}
+
+class TypeNews{
+  final String title;
+  final String source;
+
+  TypeNews(this.title, this.source);
+
 }
