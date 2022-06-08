@@ -4,7 +4,6 @@ import 'package:assignment_1_flutter_course/news_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../model/news.dart';
-import '../data/dummy.dart';
 
 void main() {
   runApp(MyApp());

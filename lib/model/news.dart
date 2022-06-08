@@ -1,9 +1,6 @@
 
-import 'package:floor/floor.dart';
 
-@entity
 class News {
-  @primaryKey
   final int id;
   final String author;
   final String title;

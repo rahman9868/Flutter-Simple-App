@@ -24,7 +24,6 @@ dependencies:
   flutter:
     sdk: flutter
   url_launcher: ^5.4.0  
-  floor: ^1.2.0
 
 
 
@@ -36,8 +35,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  floor_generator: ^1.2.0
-  build_runner: ^2.1.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
