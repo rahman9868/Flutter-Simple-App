@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:assignment_1_flutter_course/news_list.dart';
+import 'package:assignment_1_flutter_course/reference.dart';
+import 'package:assignment_1_flutter_course/story.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../model/news.dart';
@@ -69,8 +71,19 @@ class _HomePageState extends State<HomePage> {
           // mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Top Story", style: TextStyle(fontSize: 18,color: Colors.blue, decoration: TextDecoration.underline),),
+            ),
             _loading ? Center(child: CircularProgressIndicator(color: Colors.blue,)) :
-            NewsList(getListNews()),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+              child: StoryNews(getListNews()),
+            ),
+            _loading ? Center(child: CircularProgressIndicator(color: Colors.blue,)) : 
+            Padding(padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
+            child: ReferenceNews(getListNews()),),
+
           ],
         ),
       ),
